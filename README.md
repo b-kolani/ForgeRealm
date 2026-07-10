@@ -1,8 +1,8 @@
-# TerraForge
+# ForgeRealm
 
 A 2D sandbox game built from scratch in modern C++ using SFML.
 
-TerraForge is a long-term project focused on learning game engine architecture, gameplay programming, and modern C++ while creating a complete sandbox experience inspired by games such as Terraria and Stardew Valley.
+ForgeRealm is a long-term project focused on learning game engine architecture, gameplay programming, and modern C++ while creating a complete sandbox experience inspired by games such as Terraria and Stardew Valley.
 
 > This project is developed for educational purposes and portfolio building.
 
