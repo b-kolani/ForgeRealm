@@ -6,15 +6,17 @@
 class	Window
 {
 	public:
-				Window();
+							Window();
 
-		bool	isOpen() const;
+		bool				isOpen() const;
 
-		void	processEvents();
+		void				pollEvents();
 
-		void	clear();
+		void				clear();
 
-		void	display();
+		void				display();
+
+		sf::RenderWindow&	getRenderWindow();
 	
 	private:
 		sf::RenderWindow	m_window;

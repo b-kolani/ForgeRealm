@@ -1,7 +1,11 @@
 #include <iostream>
+#include "core/Application.hpp"
 
 int	main()
 {
-	std::cout << "Evrything goes well!" << std::endl;
+	Application	app;
+
+	app.run();
+	
 	return (0);
 }
