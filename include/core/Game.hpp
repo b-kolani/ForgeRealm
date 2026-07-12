@@ -2,6 +2,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "core/Input.hpp"
+#include "game/Player.hpp"
 
 class	Game
 {
@@ -11,8 +12,7 @@ class	Game
 		void				render(sf::RenderWindow& window);
 	
 	private:
-		sf::RectangleShape	m_player;
+		Player				m_player;
 		sf::View			m_camera;
 		float				m_playerSpeed = 250.f;
 };
-
