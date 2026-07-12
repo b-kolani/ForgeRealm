@@ -6,11 +6,14 @@ void    Application::run()
 {
     while (m_window.isOpen())
     {
-        // m_time.update();
+        m_time.update();
 
         m_window.pollEvents();
 
-        m_game.update();
+        m_game.update(
+            m_time.deltaTime(),
+            m_input
+        );
 
         m_window.clear();
 

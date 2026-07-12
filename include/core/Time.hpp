@@ -4,10 +4,8 @@
 class	Time
 {
 	public:
-					Time() = default;
-
+					Time();
 		void		update();
-
 		sf::Time	deltaTime() const;
 	
 	private:

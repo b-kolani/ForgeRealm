@@ -21,6 +21,8 @@ add_executable(
     src/core/Application.cpp
     src/core/Window.cpp
     src/core/Game.cpp
+    src/core/Input.cpp
+    src/core/Time.cpp
 )
 
 target_link_libraries(
