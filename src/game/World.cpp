@@ -6,22 +6,11 @@ World::World(std::size_t width, std::size_t height):
     m_width(width),
     m_height(height)
 {
-    srand(time(NULL));
     for (std::size_t y = height - 3; y < height; ++y)
     {
         for (std::size_t x = 0; x < width; ++x)
         {
-            int randNum = rand() % 3;
-            if (x >= height - 3)
-                getTile(x, y).setType(TileType::Dirt);
-            else {
-                if (randNum == 0)
-                    getTile(x, y).setType(TileType::Grass);
-                else if (randNum == 1)
-                    getTile(x, y).setType(TileType::Stone);
-                else
-                    getTile(x, y).setType(TileType::Air);
-            }
+            getTile(x, y).setType(TileType::Dirt);
         }
     }
 

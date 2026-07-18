@@ -4,7 +4,7 @@
 
 class   World;
 
-class   WorldRender
+class   WorldRenderer
 {
     public:
         void    render(sf::RenderWindow& window,

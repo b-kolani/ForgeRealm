@@ -1,8 +1,8 @@
-#include "graphics/WorldRender.hpp"
+#include "graphics/WorldRenderer.hpp"
 #include "game/World.hpp"
 #include <iostream>
 
-void    WorldRender::render(sf::RenderWindow& window,
+void    WorldRenderer::render(sf::RenderWindow& window,
                                 const World& world)
 {
     sf::RectangleShape  rectangle;
@@ -12,9 +12,9 @@ void    WorldRender::render(sf::RenderWindow& window,
         World::TileSize
     )); 
 
-    for (std::size_t x = 0; x < world.getWidth(); ++x)
+    for (std::size_t y = 0; y < world.getHeight(); ++y)
     {
-        for (std::size_t y = 0; y < world.getHeight(); ++y)
+        for (std::size_t x = 0; x < world.getWidth(); ++x)
         {
             const Tile&    tile = world.getTile(x, y);
             
