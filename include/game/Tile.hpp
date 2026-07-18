@@ -5,7 +5,7 @@ enum class	TileType
 	Air,
 	Dirt,
 	Stone,
-	grass
+	Grass
 };
 
 class	Tile

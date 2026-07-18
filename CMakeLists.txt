@@ -25,6 +25,10 @@ add_executable(
     src/core/Game.cpp
     src/core/Input.cpp
     src/core/Time.cpp
+    src/game/Player.cpp
+    src/game/World.cpp
+    src/game/Tile.cpp
+    src/graphics/WorldRender.cpp
 )
 
 target_link_libraries(

@@ -1,10 +1,10 @@
 #pragma once
 
 
-#include "core/Window.hpp"
-#include "core/Game.hpp"
 #include "core/Time.hpp"
 #include "core/Input.hpp"
+#include "core/Game.hpp"
+#include "core/Window.hpp"
 
 class   Application
 {
