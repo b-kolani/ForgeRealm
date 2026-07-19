@@ -23,4 +23,5 @@ class	World
 		std::vector<Tile>		m_tiles;
 		std::size_t				m_width;
 		std::size_t				m_height;
+		void					generateFlatworld();
 };

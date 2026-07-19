@@ -29,6 +29,7 @@ add_executable(
     src/game/World.cpp
     src/game/Tile.cpp
     src/graphics/WorldRenderer.cpp
+    src/graphics/PlayerRenderer.cpp
 )
 
 target_link_libraries(

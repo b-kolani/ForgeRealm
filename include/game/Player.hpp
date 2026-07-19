@@ -2,18 +2,19 @@
 
 #include <SFML/Graphics.hpp>
 #include "math/Transform.hpp"
+#include "core/Input.hpp"
 
 class   Player
 {
     public:
                             Player();
-        void                update(sf::Time deltaTime);
-        void                render(sf::RenderWindow& window);
+        void                update(const Input& input, sf::Time deltaTime);
+
+        const sf::Vector2f& getSize() const;
+        const sf::Vector2f& getPosition() const;
     
     private:
-        // Transform           m_transform;
         sf::Vector2f        m_position;
         sf::Vector2f        m_size;
-        // sf::RectangleShape  m_sprite;
         float               m_speed = 250.f;
 };

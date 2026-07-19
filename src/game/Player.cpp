@@ -6,17 +6,27 @@ Player::Player():
     m_speed(250.f)  
 {}
 
-void    Player::update(sf::Time deltaTime)
-{}
-
-void    Player::render(sf::RenderWindow& window)
+void    Player::update(const Input& input, sf::Time deltaTime)
 {
-    sf::RectangleShape  player;
+    sf::Vector2f    movement;
 
-    player.setSize(m_size);
-    player.setPosition(m_position);
+    if (input.isMovingLeft())
+        movement.x -= 1;
+    if (input.isMovingRight())
+        movement.x += 1;
+    if (input.isMovingUp())
+        movement.y -= 1;
+    if (input.isMovingDown())
+        movement.y += 1;
+    m_position += movement * m_speed * deltaTime.asSeconds();
+}
 
-    player.setFillColor(sf::Color::Red);
+const sf::Vector2f&  Player::getSize() const
+{
+    return m_size;
+}
 
-    window.draw(player);
+const sf::Vector2f& Player::getPosition() const 
+{
+    return  m_position;
 }

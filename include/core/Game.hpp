@@ -4,6 +4,7 @@
 #include "game/Player.hpp"
 #include "game/World.hpp"
 #include "graphics/WorldRenderer.hpp"
+#include "graphics/PlayerRenderer.hpp"
 #include <SFML/Graphics.hpp>
 
 class	Game
@@ -17,6 +18,6 @@ class	Game
 		Player				m_player;
 		World				m_world;
 		WorldRenderer		m_WorldRenderer;
-		// sf::View			m_camera;
-		// float				m_playerSpeed = 250.f;
+		PlayerRenderer		m_playerRenderer;
+
 };

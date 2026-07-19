@@ -6,14 +6,7 @@ World::World(std::size_t width, std::size_t height):
     m_width(width),
     m_height(height)
 {
-    for (std::size_t y = height - 3; y < height; ++y)
-    {
-        for (std::size_t x = 0; x < width; ++x)
-        {
-            getTile(x, y).setType(TileType::Dirt);
-        }
-    }
-
+    generateFlatworld();
 }
 
 void    World::update(sf::Time deltaTime)
@@ -56,3 +49,15 @@ bool    World::contains(std::size_t x, std::size_t y) const
 {
     return (x < m_width && y < m_height);
 }
+
+void    World::generateFlatworld()
+{
+    for (std::size_t y = m_height - 3; y < m_height; ++y)
+    {
+        for (std::size_t x = 0; x < m_width; ++x)
+        {
+            getTile(x, y).setType(TileType::Dirt);
+        }
+    }
+}
+
